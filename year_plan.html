@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>Sign Up Example</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/billing.css" />
+</header>
+
+<head>
+    <meta name="refresh" content="0; url=login.html">
+    <style>
+        body {
+            background: #464646;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+    
+        .switch {
+            position: relative;
+            width: 200px;
+            height: 50px;
+            border-radius: 25px;
+            background: #1E1E1E;
+        }
+    
+        .switch input {
+            appearance: none;
+            width: 200px;
+            height: 50px;
+            border-radius: 25px;
+            background: #1E1E1E;
+            outline: none;
+        }
+    
+        .switch input::before,
+        .switch input::after {
+            z-index: 2;
+            position: absolute;
+            top: 56%;
+            transform: translateY(-50%);
+            font-weight: bolder;
+        }
+    
+        .switch input::before {
+            content: "Monthly";
+            left: 20px;
+        }
+    
+        .switch input::after {
+            content: "Yearly";
+            right: 20px;
+        }
+    
+        .switch input:checked {
+            background: #1e4d91;
+        }
+    
+        .switch label {
+            z-index: 1;
+            position: absolute;
+            top: 10px;
+            bottom: 4px;
+            border-radius: 20px;
+        }
+    
+        .switch input {
+            transition: 0.25s;
+        }
+    
+        .switch input:checked::after,
+        .switch input:checked::before {
+            color: #fff;
+            transition: color 0.5s;
+        }
+    
+        .switch input:checked+label {
+            left: 10px;
+            right: 100px;
+            background: white;
+            transition: left 0.5s, right 0.4s 0.2s;
+        }
+    
+        .switch input:not(:checked) {
+            background: #1e4d91;
+            transition: background 0.4s;
+    
+        }
+    
+        .switch input:not(:checked)::before {
+            color: #ffff;
+            transition: color 0.5s;
+        }
+    
+        .switch input:not(:checked)::after {
+            color: #1e4d91;
+            transition: color 0.5s 0.2s;
+        }
+    
+        .switch input:not(:checked)+label {
+            left: 100px;
+            right: 10px;
+            background: white;
+            transition: left 0.4s 0.2s, right 0.5s, background 0.35s;
+        }
+    </style>
+</head>
+
+<body>
+    <span class=""></span>
+    <span class="centering">
+        <form class="my-form" style="max-width: none;" id="signup-form">
+            <section class="tab-content">
+                <div class="container">
+                    <!-- Tab Content 3 -->
+                    <div id="tab-3-content" class="tab-content-item show">
+
+                        <div class="text-center">
+                            <p class="text-lg" style="margin-bottom: 1rem; font-weight: 700;">
+                                Choose the right plan for you
+                            </p>
+                            <!-- <a href="#" class="btn btn-lg">Mobile</a> -->
+                        </div>
+                        <!-- boxes -->
+
+                        <div class="planGrid--has4Plans">
+                            <div class="planGrid__header">
+                                <span class="switch" style="left: -677px;top: 96px;">
+                                    <input type="checkbox" id="switcher">
+                                    <label for="switcher"></label>
+                                </span>
+                                <div class="planGrid__selector">
+                                    <label class="planGrid__planChoice choice1">
+                                        <input type="radio" name="planChoice"
+                                            class="planGrid__selectorInput planGrid__planInput" value="114120"
+                                            id="planGrid_planChoice_0">
+                                        <span class="planGrid__selectorLabel planGrid__planLabel">Mobile</span>
+                                    </label>
+                                    <label class="planGrid__planChoice choice2">
+                                        <input type="radio" name="planChoice"
+                                            class="planGrid__selectorInput planGrid__planInput" value="314001031"
+                                            id="planGrid_planChoice_1" checked="">
+                                        <span class="planGrid__selectorLabel planGrid__planLabel">Basic</span>
+                                    </label>
+                                    <label class="planGrid__selectorChoice planGrid__planChoice choice3">
+                                        <input type="radio" name="planChoice"
+                                            class="planGrid__selectorInput planGrid__planInput" value="10322"
+                                            id="planGrid_planChoice_2">
+                                        <span class="planGrid__selectorLabel planGrid__planLabel">Standard</span>
+                                    </label>
+                                    <label class="planGrid__selectorChoice planGrid__planChoice choice4">
+                                        <input type="radio" name="planChoice"
+                                            class="planGrid__selectorInput planGrid__planInput" value="10322"
+                                            id="planGrid_planChoice_2">
+                                        <span class="planGrid__selectorLabel planGrid__planLabel">Premium</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- boxes, end -->
+
+                        <table class="table">
+                            <!-- <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Mobile</th>
+                                    <th>Basic</th>
+                                    <th>Standard</th>
+                                    <th>Premium</th>
+                                </tr>
+                            </thead> -->
+                            <tbody>
+                                <tr class="last_row color">
+                                    <td class="change_color">Yearly price</td>
+                                    <td class="choice1">₹ 1000</td>
+                                    <td class="choice2">₹ 2000</td>
+                                    <td class="choice3">₹ 5000</td>
+                                    <td class="choice4">₹ 7000</td>
+                                </tr>
+                                <tr class="last_row color">
+                                    <td class="change_color">Video quality</td>
+                                    <td class="choice1">Good</td>
+                                    <td class="choice2">Good</td>
+                                    <td class="choice3">Better</td>
+                                    <td class="choice4">Best</td>
+                                </tr>
+                                <tr class="last_row color">
+                                    <td class="change_color">Resolution</td>
+                                    <td class="choice1">480p</td>
+                                    <td class="choice2">480p</td>
+                                    <td class="choice3">1080p</td>
+                                    <td class="choice4">4K+HDR</td>
+                                </tr>
+                                <tr class="color">
+                                    <td class="change_color">Devices you can use to watch</td>
+                                    <td class="choice1">Phone</td>
+                                    <td class="choice2">Phone</td>
+                                    <td class="choice3">Phone</td>
+                                    <td class="choice4">Phone</td>
+                                </tr>
+                                <tr class="color">
+                                    <td class="change_color"></td>
+                                    <td class="choice1">Tablet</td>
+                                    <td class="choice2">Tablet</td>
+                                    <td class="choice3">Tablet</td>
+                                    <td class="choice4">Tablet</td>
+                                </tr>
+                                <tr class="color">
+                                    <td></td>
+                                    <td></td>
+                                    <td class="choice2">Computer</td>
+                                    <td class="choice3">Computer</td>
+                                    <td class="choice4">Computer</td>
+                                </tr>
+                                <tr class="color">
+                                    <td></td>
+                                    <td></td>
+                                    <td class="choice2">TV</td>
+                                    <td class="choice3">TV</td>
+                                    <td class="choice4">TV</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><i class="fas fa-check"></i></td>
+                                    <td><i class="fas fa-check"></i></td>
+                                    <td><i class="fas fa-check"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="checkout.html" class="my-form__button" style="margin: auto; width: 50%;">Next</a>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </span>
+    <script>
+        const nextButton = document.getElementById("next-button");
+        const signupForm = document.getElementById("signup-form");
+
+        nextButton.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the default behavior of the anchor tag
+            signupForm.submit(); // Manually submit the form
+        });
+    </script>
+    <!-- <script src="js/script.js"></script> -->
+    <script>
+        const tds = document.querySelectorAll("tr.color td");
+
+        for (let i = 0; i < tds.length; i++) {
+            if (tds[i].classList.contains("change_color")) {
+                continue;
+            }
+
+            tds[i].style.color = "#737373";
+        }
+    </script>
+    <!-- <script>
+        const labelChoice1 = document.querySelector("label.choice1");
+            const tdChoices = document.querySelectorAll("td.choice1");
+
+            labelChoice1.addEventListener("click", () => {
+                for (let i = 0; i < tdChoices.length; i++) {
+                    tdChoices[i].style.color = "blue";
+                }
+            });
+
+    </script> -->
+    <script>
+        // MOBILE
+        const labelChoice1 = document.querySelector("label.choice1");
+        const labelChoice2 = document.querySelector("label.choice2");
+        const labelChoice3 = document.querySelector("label.choice3");
+        const labelChoice4 = document.querySelector("label.choice4");
+        const tdChoices = document.querySelectorAll("td.choice1");
+
+        labelChoice1.addEventListener("click", () => {
+            for (let i = 0; i < tdChoices.length; i++) {
+                tdChoices[i].style.color = "#1e4d91";
+            }
+        }
+
+        );
+
+        labelChoice2.addEventListener("click", () => {
+            for (let i = 0; i < tdChoices.length; i++) {
+                tdChoices[i].style.color = "#737373";
+            }
+        }
+
+        );
+
+        labelChoice3.addEventListener("click", () => {
+            for (let i = 0; i < tdChoices.length; i++) {
+                tdChoices[i].style.color = "#737373";
+            }
+        }
+
+        );
+
+        labelChoice4.addEventListener("click", () => {
+            for (let i = 0; i < tdChoices.length; i++) {
+                tdChoices[i].style.color = "#737373";
+            }
+        }
+
+        );
+        // 
+        // BASICS
+        const primaryChoice = document.querySelector("label.choice2");
+        const secondaryChoice = document.querySelector("label.choice1");
+        const tertiaryChoice = document.querySelector("label.choice3");
+        const quaternaryChoice = document.querySelector("label.choice4");
+        const allChoices = document.querySelectorAll("td.choice2");
+
+        primaryChoice.addEventListener("click", () => {
+            for (let i = 0; i < allChoices.length; i++) {
+                allChoices[i].style.color = "#1e4d91";
+            }
+        });
+
+        secondaryChoice.addEventListener("click", () => {
+            for (let i = 0; i < allChoices.length; i++) {
+                allChoices[i].style.color = "#737373";
+            }
+        });
+
+        tertiaryChoice.addEventListener("click", () => {
+            for (let i = 0; i < allChoices.length; i++) {
+                allChoices[i].style.color = "#737373";
+            }
+        });
+
+        quaternaryChoice.addEventListener("click", () => {
+            for (let i = 0; i < allChoices.length; i++) {
+                allChoices[i].style.color = "#737373";
+            }
+        });
+        // 
+        // STANDARD
+        const choiceLabel3 = document.querySelector("label.choice3");
+        const choiceLabel2 = document.querySelector("label.choice2");
+        const choiceLabel4 = document.querySelector("label.choice4");
+        const choiceCells = document.querySelectorAll("td.choice3");
+
+        choiceLabel3.addEventListener("click", () => {
+            for (let i = 0; i < choiceCells.length; i++) {
+                choiceCells[i].style.color = "#1e4d91";
+            }
+        }
+        );
+
+        choiceLabel2.addEventListener("click", () => {
+            for (let i = 0; i < choiceCells.length; i++) {
+                choiceCells[i].style.color = "#737373";
+            }
+        }
+        );
+
+        choiceLabel4.addEventListener("click", () => {
+            for (let i = 0; i < choiceCells.length; i++) {
+                choiceCells[i].style.color = "#737373";
+            }
+        }
+        );
+        // 
+        // PREMIUM
+        const choice1 = document.querySelector("label.choice4");
+        const choice2 = document.querySelector("label.choice2");
+        const choice3 = document.querySelector("label.choice3");
+        const choice4 = document.querySelector("label.choice1");
+        const choices = document.querySelectorAll("td.choice4");
+
+        choice1.addEventListener("click", () => {
+            for (let i = 0; i < choices.length; i++) {
+                choices[i].style.color = "#1e4d91";
+            }
+        });
+
+        choice2.addEventListener("click", () => {
+            for (let i = 0; i < choices.length; i++) {
+                choices[i].style.color = "#737373";
+            }
+        });
+
+        choice3.addEventListener("click", () => {
+            for (let i = 0; i < choices.length; i++) {
+                choices[i].style.color = "#737373";
+            }
+        });
+
+        choice4.addEventListener("click", () => {
+            for (let i = 0; i < choices.length; i++) {
+                choices[i].style.color = "#737373";
+            }
+        });
+
+
+    </script>
+    <script>
+        const switchElement = document.querySelector(".switch");
+        const inputElement = document.querySelector("#switcher");
+        const labelElement = document.querySelector(".switch label");
+
+        const otherPageUrl = "billing.html";
+
+        inputElement.addEventListener("change", () => {
+            if (inputElement.checked) {
+                // Redirect to the other page when the switch is turned on.
+                window.location.href = otherPageUrl;
+            } else {
+                // Do nothing when the switch is turned off.
+            }
+        });
+
+    </script>
+    
+
+</body>
+
+</html>

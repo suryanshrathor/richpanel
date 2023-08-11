@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Sign Up Example</title>
+        <link rel="stylesheet" href="css/style.css"/>
+    </header>
+    <head>
+        <meta name="refresh" content="0; url=login.html">
+    </head>
+
+    <body>
+        <span class="background"></span>
+        <span class="centering">
+            <form class="my-form">
+                <span class="signup-welcome-row">
+                    <!-- <img
+                        class="signup-welcome"
+                        src="assets/logo.svg"
+                    /> -->
+                    <h1>Create Account</h1>
+                </span>
+                <span class="socials-row">
+                    <a
+                        href="#"
+                        title="Use Google"
+                    >
+                        <img src="assets/google.png" alt="Google">
+                        Use Google
+                    </a>
+                    <a
+                        href="#"
+                        title="Use Facebook"
+                    >
+                        <img src="assets/facebook.png" alt="Facebook">
+                        Use Facebook
+                    </a>
+                </span>
+                <span class="divider">
+                    <span class="divider-line"></span>
+                    OR
+                    <span class="divider-line"></span>
+                </span>
+
+
+                
+                <div class="my-form__content">
+                    <div class="text-field">
+                        <label for="name">Name</label>
+                        <input aria-label="Name" type="text" id="name" name="name" placeholder="Your Name" autocomplete="off" required>
+                    </div>
+                    <div class="text-field">
+                        <label for="email">Email</label>
+                        <input aria-label="Email" type="email" id="email" name="email" placeholder="Your Email" autocomplete="off" required>
+                    </div>
+                    <div class="text-field">
+                        <label for="password">Password</label>
+                        <input aria-label="Password" type="password" id="password" name="password" placeholder="Your Password" autocomplete="off" required>
+                    </div>
+                    <div class="#">
+                        <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
+                        <!-- <input type="submit" value="Login" onclick="lsRememberMe()"> -->
+                    </div>
+                    <!--? more fields -->
+                    <input type="submit" class="my-form__button" value="Sign-Up" />
+                </div>
+                <div class="my-form__actions">
+                    <span>
+                        Already have an account?
+                    </span>
+                    <div class="my-form__signin">
+                        <a href="login.html" title="Sign In">Sign-in</a>
+                    </div>
+                </div>
+            </form>
+        </span>
+        <script src="js/script.js"></script>
+    </body>
+</html>
